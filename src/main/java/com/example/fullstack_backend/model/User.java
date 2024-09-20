@@ -1,18 +1,18 @@
 package com.example.fullstack_backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class User {
-
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
-    private String name;
-    private String email;
+    private String password;
+    private String fullName;
 
 
     public Long getId() {
@@ -31,20 +31,21 @@ public class User {
         this.username = username;
     }
 
-    public String getName() {
-        return this.name;
+    public String getPassword() {
+        return this.password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getEmail() {
-        return this.email;
+    public String getFullName() {
+        return this.fullName;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
-
+   
 }
+
