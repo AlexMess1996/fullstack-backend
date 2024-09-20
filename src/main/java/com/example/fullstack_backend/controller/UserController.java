@@ -3,6 +3,7 @@ package com.example.fullstack_backend.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -12,6 +13,7 @@ import com.example.fullstack_backend.model.User;
 import com.example.fullstack_backend.repository.UserRepository;
 
 @RestController
+@CrossOrigin("http://localhost:3000")
 public class UserController {
     @Autowired
     private UserRepository userRepository;
